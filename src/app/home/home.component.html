@@ -1,0 +1,41 @@
+<div *ngIf="role == 'admin'" class="container">
+  <div class="header">
+    <div class="header-child">UserList</div>
+    <div class="header-child">UserList</div>
+    <div class="header-child">UserList</div>
+    <div class="header-child">Role : {{role}}</div>
+    <div class="header-logout" (click)="logout()">Logout</div>
+  </div>
+  <div class="content">
+    <h2>User List</h2>
+    <table>
+      <tr>
+        <th>No</th>
+        <th>User ID</th>
+        <th>Username</th>
+        <th>User Role</th>
+      </tr>
+      <tr *ngFor="let item of userData; let i = index;">
+        <th>{{i+1}}</th>
+        <th>{{item._id}}</th>
+        <th>{{item.username}}</th>
+        <th>{{item.role}}</th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="role == 'member'" class="container">
+  <div class="header">
+    <div class="header-child" (click)="activateHome()">Home</div>
+    <div class="header-child" (click)="activateAbout()">About</div>
+    <div class="header-child" (click)="activateContact()">Contact</div>
+    <div class="header-child">Role : {{role}}</div>
+    <div class="header-logout" (click)="logout()">Logout</div>
+  </div>
+  <div class="content">
+    <p *ngIf="homePage == true">This is Home page</p>
+    <p *ngIf="aboutPage == true">This is About page</p>
+    <p *ngIf="contactPage == true">This is Contact page</p>
+  </div>
+</div>

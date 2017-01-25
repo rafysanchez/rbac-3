@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="authForm">
+    <div class="authHeader">
+      <div [ngClass]="{'loginHeader':true, 'active':loginForm}" (click)="toggleLogin()"><span class="headerText">Sign In</span></div>
+      <div [ngClass]="{'loginHeader':true, 'active':registerForm}" (click)="toggleRegister()"><span class="headerText">Sign Up</span></div>
+    </div>
+    <div class="authBody" *ngIf="loginForm == true">
+      <input type="text" placeholder="Username" [(ngModel)]="loginData['username']">
+      <input type="password" placeholder="Password" [(ngModel)]="loginData['password']">
+      <div class="errorMessage"><span *ngIf="failedMessage !== ''">{{failedMessage}}</span></div>
+      <input type="submit" value="Login" (click)="loginUser()">
+    </div>
+    <div class="authBody" *ngIf="registerForm == true">
+      <input type="text" placeholder="Username" [(ngModel)]="registerData['username']">
+      <input type="password" placeholder="Password" [(ngModel)]="registerData['password']">
+      <div class="errorMessage"><span *ngIf="failedMessage !== ''">{{failedMessage}}</span></div>
+      <input type="submit" value="Register" (click)="registerUser()">
+    </div>
+  </div>
+</div>

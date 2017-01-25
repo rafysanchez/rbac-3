@@ -1,0 +1,60 @@
+.container
+{
+
+}
+
+.header
+{
+    padding: 3vh 0;
+    background-color: #7a8bd8;
+    color: #fff;
+    overflow: auto;
+    clear: both;
+}
+
+.header .header-child
+{
+    width: 20%;
+    padding: 6px 0;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header-logout {
+    width: calc(5% - 12px);
+    padding: 5px;
+    margin: 0 7.5%;
+    border: 1px solid #fff;
+    float: left;
+    cursor: pointer;
+    text-align: center;
+}
+
+.content
+{
+    height: 90vh;
+    width: 90%;
+    margin: 0 5%;
+}
+
+.content p
+{
+    margin-top: 40vh;
+    text-align: center;
+}
+
+.content h2
+{
+    margin-left: 5%;
+}
+
+table th, td
+{
+    border: 1px solid #333;
+}
+
+th, td
+{
+    padding: 10px;
+}

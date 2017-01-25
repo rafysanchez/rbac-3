@@ -1,0 +1,111 @@
+.container
+{
+    padding: 25vh 0;
+    background-color: #545454;
+}
+
+.authForm
+{
+    height: 50vh;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.authHeader
+{
+    width: 100%;
+    height: 8vh;
+    margin-bottom: 2vh;
+    font: 13.3333px Arial;
+}
+
+.authBody
+{
+    width: 95%;
+    margin: 0 2.5%;
+    height: 40vh;
+    background-color: rgb(122, 139, 216);
+    text-align: center;
+}
+
+.authBody input
+{
+    width: calc(80% - 10%);
+    height: 8vh;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    font-size: 1em;
+    padding: 0 5%;
+    border: none;
+    background-color: #5c6aab;
+    color: #fff;
+}
+
+::-webkit-input-placeholder
+{
+    color: #fff;
+}
+
+.authBody input[type="submit"]
+{
+    padding: 0;
+    width: 80%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.authBody input[type="submit"]:hover
+{
+    background-color: #fff;
+    color: #333;
+}
+
+.authBody input:first-child
+{
+    margin-top: 4vh;
+}
+
+.authBody input:nth-child(2)
+{
+    margin-bottom: 0;
+}
+
+.errorMessage
+{
+    margin-top: 1vh;
+    height: 3vh;
+    color: #fff;
+}
+
+.errorMessage span::before
+{
+    content: '*';
+}
+
+.loginHeader.active, .registerHeader.active
+{
+    border: 1px solid #7a8bd8;
+    background-color: #7a8bd8;
+    color: #fff;
+}
+
+.loginHeader, .registerHeader
+{
+    width: calc(45% - 2px);
+    margin: 0 2.5%;
+    height: calc(100% - 2px);
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    float: left;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+} 
+
+.headerText
+{
+    align-self: center;
+}
